@@ -1,1 +1,3 @@
-console.log("Hello World");
+import { conectar } from "./config/database.js";
+
+conectar();
