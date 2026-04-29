@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
-import { Pool, Client } from "pg";
+import { Pool } from "pg";
 
 export const Pool = new Pool({
     user: process.env.DB_USER,
@@ -8,7 +8,7 @@ export const Pool = new Pool({
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     database: process.env.DB_NAME,
-    ssl:{
+    ssl: {
         rejectUnauthorized: false
     }
 })
